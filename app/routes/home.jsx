@@ -3,7 +3,7 @@ import { isRouteErrorResponse, useRouteError } from 'react-router';
 
 // The loader runs *before* the component renders
 export async function loader() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts?_limit=5');
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
   if (!res.ok) throw new Response('Failed to fetch posts', { status: res.status });
   const posts = await res.json();
   return posts;
