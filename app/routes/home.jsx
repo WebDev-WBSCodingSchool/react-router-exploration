@@ -1,5 +1,5 @@
 // app/routes/home.jsx
-import { useLoaderData, isRouteErrorResponse, useRouteError } from 'react-router';
+import { isRouteErrorResponse, useRouteError } from 'react-router';
 
 // The loader runs *before* the component renders
 export async function loader() {
@@ -18,8 +18,8 @@ export function meta() {
 }
 
 // Component renders using the loaded data
-export default function Home() {
-  const posts = useLoaderData();
+export default function Home({ loaderData }) {
+  const posts = loaderData;
 
   return (
     <main className='p-4 space-y-4'>
