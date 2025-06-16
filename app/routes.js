@@ -4,5 +4,6 @@ export default [
   index('routes/home.jsx'),
   route('/about', 'routes/about.jsx'),
   route('/contact', 'routes/contact.jsx'),
-  route('/products/:pid', 'routes/product.jsx')
+  route('/products/:pid', 'routes/product.jsx'),
+  route('/todos', 'routes/todos.jsx')
 ];
